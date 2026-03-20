@@ -8,6 +8,9 @@ This repo deploys [pi](https://github.com/badlogic/pi) — a terminal-based AI c
 - `pi/extensions/` — pi extensions
   - `bitbloxhub-preferences.ts` — coding style + user preferences
   - `distrobox-prompt.ts` — distrobox context reminders
+- `skills/` — agent skills (global + local)
+  - Global: `find-skills`, `agent-browser`, `tmux`
+  - Local: `flake-aspects`, `flake-file`, `import-tree` (see `skills/<name>/SKILL.md`)
 
 ## Development
 

@@ -20,3 +20,13 @@ That's it. It installs node, pi, extensions, and all dependencies.
 - **bitbloxhub-preferences** - enforces my coding style (tabs, no semicolons, trailing commas)
 - **distrobox-prompt** - reminds agents to use `distrobox-host-exec` for host commands
 - **pi-hashline-edit** - overrides read/grep/edit tools with content-anchored line references (LINE:HASH|content) for more reliable edits
+
+## Skills
+### Global (from remote repos)
+- **find-skills** — discover and install agent skills
+- **agent-browser** — browser automation for web tasks
+- **tmux** — remote control tmux sessions
+### Local (in `skills/`)
+- **flake-aspects** — modular Nix configuration with flake-parts
+- **flake-file** — generate `flake.nix` from modular Nix options
+- **import-tree** — import directory trees of Nix modules
