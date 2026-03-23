@@ -50,17 +50,17 @@ mkdir $pi_config_dir
 
 # Default settings
 let pi_default_settings = {
-	defaultProvider: "openrouter"
-	defaultModel: "moonshotai/kimi-k2.5"
+	defaultProvider: "openai-codex"
+	defaultModel: "gpt-5.4"
 	hideThinkingBlock: false
 	defaultThinkingLevel: "high"
 	enabledModels: [
-		"z-ai/glm-5"
-		"moonshotai/kimi-k2.5"
-		"minimax/minimax-m2.7"
-		"openai/gpt-oss-120b"
-		"openai/gpt-5.4-nano"
-		"mistralai/mistral-small-2603"
+		"openrouter/z-ai/glm-5"
+		"openrouter/moonshotai/kimi-k2.5"
+		"openrouter/minimax/minimax-m2.7"
+		"openrouter/openai/gpt-oss-120b"
+		"openrouter/mistralai/mistral-small-2603"
+		"openai-codex/gpt-5.4"
 	]
 }
 
