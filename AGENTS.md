@@ -8,6 +8,7 @@ This repo deploys [pi](https://github.com/badlogic/pi) — a terminal-based AI c
 - `pi/extensions/` — pi extensions
   - `bitbloxhub-preferences.ts` — coding style + user preferences
   - `distrobox-prompt.ts` — distrobox context reminders
+  - `editorconfig-context.ts` — injects the nearest `.editorconfig` so project formatting overrides general preferences
 - `skills/` — agent skills (global + local)
   - Global: `find-skills`, `agent-browser`, `tmux`
   - Local: `flake-aspects`, `flake-file`, `import-tree` (see `skills/<name>/SKILL.md`)
@@ -15,7 +16,7 @@ This repo deploys [pi](https://github.com/badlogic/pi) — a terminal-based AI c
 ## Development
 
 ### Style
-- Tabs for indentation, no semicolons, trailing commas
+- Tabs for indentation, no semicolons, trailing commas by default; if a project has `.editorconfig`, follow that instead
 
 ### Adding Extensions
 1. Write a `.ts` extension in `pi/extensions/`

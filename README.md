@@ -5,7 +5,7 @@ My personal [pi](https://github.com/badlogic/pi) configuration for an Arch Linux
 ## What's Inside
 
 - `pi-setup.nu` — one-shot installer for the whole toolchain
-- `pi/extensions/` — custom pi extensions for my preferences and distrobox setup
+- `pi/extensions/` — custom pi extensions for my preferences, distrobox setup, and project-specific EditorConfig context
 
 ## Quick Start
 
@@ -17,8 +17,9 @@ That's it. It installs node, pi, extensions, and all dependencies.
 
 ## Extensions
 
-- **bitbloxhub-preferences** - enforces my coding style (tabs, no semicolons, trailing commas)
+- **bitbloxhub-preferences** - sets my default coding style (tabs, no semicolons, trailing commas)
 - **distrobox-prompt** - reminds agents to use `distrobox-host-exec` for host commands
+- **editorconfig-context** - injects the nearest project `.editorconfig` into context so project formatting overrides general preferences
 - **pi-hashline-edit** - overrides read/grep/edit tools with content-anchored line references (LINE:HASH|content) for more reliable edits
 
 ## Skills
