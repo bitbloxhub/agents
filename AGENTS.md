@@ -23,4 +23,6 @@ This repo deploys [pi](https://github.com/badlogic/pi) — a terminal-based AI c
 
 ### Rules
 - ALL commands must use `distrobox-host-exec` (host execution)
-- Except: pacman/container mgmt, or agent-browser skill
+- Exceptions:
+  - pacman/container management
+  - agent-browser skill — NEVER use `distrobox-host-exec` for agent-browser; it manages its own host interaction and must be run directly
