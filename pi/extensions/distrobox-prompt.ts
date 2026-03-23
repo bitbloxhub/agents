@@ -11,6 +11,7 @@ When using agent-browser, run it directly — it already manages its own host in
 EVERYTHING else — installing packages, running nix commands, git, system utilities, etc. —
 must go through \`distrobox-host-exec\`.
 FAILURE to do so will result in commands affecting the container instead of the host.
+There is no system Python on the host. Python is only available inside the distrobox, so never assume host-side \`python\`/\`python3\` exists.
 `.trim()
 
 		return {
