@@ -54,7 +54,7 @@ let pi_default_settings = {
 	defaultProvider: "openai-codex"
 	defaultModel: "gpt-5.4"
 	hideThinkingBlock: false
-	defaultThinkingLevel: "high"
+	defaultThinkingLevel: "medium"
 	enabledModels: [
 		"openrouter/z-ai/glm-5"
 		"openrouter/moonshotai/kimi-k2.5"
