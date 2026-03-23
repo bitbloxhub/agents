@@ -13,7 +13,8 @@ print "Installing pi..."
 npm install -g @mariozechner/pi-coding-agent
 
 print "Installing pi extensions..."
-pi install npm:pi-hashline-edit
+# Pin until https://github.com/RimuruW/pi-hashline-edit/issues/7 is fixed
+pi install npm:pi-hashline-edit@0.3.0
 
 # Symlink custom extensions from repo to pi
 let script_dir = ($env.FILE_PWD? | default (pwd))
