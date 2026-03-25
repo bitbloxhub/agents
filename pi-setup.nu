@@ -8,6 +8,7 @@ if ((open --raw /etc/os-release | lines | where $it =~ '^NAME=' | str replace 'N
 print "Installing node..."
 yay --noconfirm -S nodejs npm
 npm config set prefix -L user '~/.local/'
+npm install -g pnpm@latest-10
 
 print "Installing pi..."
 npm install -g @mariozechner/pi-coding-agent
