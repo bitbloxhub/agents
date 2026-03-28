@@ -20,7 +20,8 @@ pi install npm:pi-hashline-edit
 # Temporary workaround
 curl -sSf -L https://raw.githubusercontent.com/bitbloxhub/ogulcancelik-pi-extensions/refs/heads/pi-update/packages/pi-session-recall/session-recall.ts | save ~/.pi/agent/extensions/session-recall.ts
 # Change back to upstream after https://github.com/coctostan/pi-lcm/pull/35 is merged
-pi install git:github.com/bitbloxhub/pi-lcm@pi-update
+# temp disabling as its still jank
+# pi install git:github.com/bitbloxhub/pi-lcm@pi-update
 
 # Symlink custom extensions from repo to pi
 let script_dir = ($env.FILE_PWD? | default (pwd))
