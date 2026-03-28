@@ -15,6 +15,12 @@ npm install -g @mariozechner/pi-coding-agent
 
 print "Installing pi extensions..."
 pi install npm:pi-hashline-edit
+# Wait for https://github.com/ogulcancelik/pi-extensions/pull/3 to be released
+# pi install npm:@ogulcancelik/pi-session-recall
+# Temporary workaround
+curl -sSf -L https://raw.githubusercontent.com/bitbloxhub/ogulcancelik-pi-extensions/refs/heads/pi-update/packages/pi-session-recall/session-recall.ts | save ~/.pi/agent/extensions/session-recall.ts
+# Change back to upstream after https://github.com/coctostan/pi-lcm/pull/35 is merged
+pi install git:github.com/bitbloxhub/pi-lcm@pi-update
 
 # Symlink custom extensions from repo to pi
 let script_dir = ($env.FILE_PWD? | default (pwd))
@@ -45,9 +51,12 @@ print "Configuring pi..."
 # Create ~/.pi/agent directory and settings.json
 let pi_config_dir = ($env.HOME | path join ".pi" "agent")
 let settings_path = ($pi_config_dir | path join "settings.json")
+let session_recall_path = ($pi_config_dir | path join "session-recall.json")
+let pi_lcm_config_path = ($pi_extensions_dir | path join "pi-lcm.config.json")
 
 # Create directories (will create parent dirs too)
 mkdir $pi_config_dir
+mkdir $pi_extensions_dir
 
 # Default settings
 let pi_default_settings = {
@@ -75,6 +84,37 @@ if ($settings_path | path exists) {
 	# Create new file
 	$pi_default_settings | save $settings_path
 	print $"Created new settings at ($settings_path)"
+}
+
+let session_recall_default = {
+	queryModel: {
+		provider: "openai-codex"
+		id: "gpt-5.4-mini"
+	}
+}
+
+if ($session_recall_path | path exists) {
+	let existing = (open $session_recall_path)
+	let merged = ($session_recall_default | merge $existing) | upsert queryModel $session_recall_default.queryModel
+	$merged | save -f $session_recall_path
+	print $"Updated session recall config at ($session_recall_path)"
+} else {
+	$session_recall_default | save $session_recall_path
+	print $"Created session recall config at ($session_recall_path)"
+}
+
+let pi_lcm_default = {
+	summaryModel: "openai-codex/gpt-5.4-mini"
+}
+
+if ($pi_lcm_config_path | path exists) {
+	let existing = (open $pi_lcm_config_path)
+	let merged = ($pi_lcm_default | merge $existing) | upsert summaryModel $pi_lcm_default.summaryModel
+	$merged | save -f $pi_lcm_config_path
+	print $"Updated pi-lcm config at ($pi_lcm_config_path)"
+} else {
+	$pi_lcm_default | save $pi_lcm_config_path
+	print $"Created pi-lcm config at ($pi_lcm_config_path)"
 }
 
 print "Installing agent-browser..."
