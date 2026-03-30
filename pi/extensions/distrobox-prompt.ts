@@ -6,7 +6,8 @@ export default function (pi: ExtensionAPI) {
 [CRITICAL Environment Context] You are running inside a distrobox container.
 ALWAYS use \`distrobox-host-exec\` for ALL commands unless there is a CLEAR reason not to.
 Exceptions: (1) managing the Arch container itself (e.g., pacman, editing container configs),
-(2) the agent-browser skill MUST NEVER be run through \`distrobox-host-exec\`.
+(2) the agent-browser skill MUST NEVER be run through \`distrobox-host-exec\`,
+(3) the host does not have a system nodejs, so use \`npx skills\` inside the distrobox.
 When using agent-browser, run it directly — it already manages its own host interaction.
 EVERYTHING else — installing packages, running nix commands, git, system utilities, etc. —
 must go through \`distrobox-host-exec\`.
