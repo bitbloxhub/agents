@@ -125,6 +125,7 @@ print "Setting up skills..."
 npx skills add --yes --global https://github.com/vercel-labs/skills --skill find-skills
 npx skills add --yes --global https://github.com/vercel-labs/agent-browser --skill agent-browser
 npx skills add --yes --global https://github.com/mitsuhiko/agent-stuff --skill tmux
+npx skills add --yes --global https://github.com/JuliusBrussee/caveman --skill caveman
 
 # GPT-5.4 likes to use python
 print "Installing python..."
