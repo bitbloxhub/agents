@@ -7,10 +7,11 @@ This repo deploys [pi](https://github.com/badlogic/pi) — a terminal-based AI c
 - `pi-setup.nu` — setup script for Arch distrobox (installs node, pi, extensions, skills)
 - `pi/extensions/` — pi extensions
   - `bitbloxhub-preferences.ts` — coding style + user preferences
+  - `caveman.ts` — loads the caveman skill into prompt context and defaults to caveman ultra
   - `distrobox-prompt.ts` — distrobox context reminders
   - `editorconfig-context.ts` — injects the nearest `.editorconfig` so project formatting overrides general preferences
 - `skills/` — agent skills (global + local)
-  - Global: `find-skills`, `agent-browser`, `tmux`
+  - Global: `find-skills`, `agent-browser`, `tmux`, `caveman`
   - Local: `flake-aspects`, `flake-file`, `import-tree` (see `skills/<name>/SKILL.md`)
 
 ## Development
