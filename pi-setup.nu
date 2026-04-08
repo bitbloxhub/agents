@@ -15,10 +15,7 @@ npm install -g @mariozechner/pi-coding-agent
 
 print "Installing pi extensions..."
 pi install npm:pi-hashline-edit
-# Wait for https://github.com/ogulcancelik/pi-extensions/pull/3 to be released
-# pi install npm:@ogulcancelik/pi-session-recall
-# Temporary workaround
-curl -sSf -L https://raw.githubusercontent.com/bitbloxhub/ogulcancelik-pi-extensions/refs/heads/pi-update/packages/pi-session-recall/session-recall.ts | save ~/.pi/agent/extensions/session-recall.ts
+pi install npm:@ogulcancelik/pi-session-recall
 # Change back to upstream after https://github.com/coctostan/pi-lcm/pull/35 is merged
 # temp disabling as its still jank
 # pi install git:github.com/bitbloxhub/pi-lcm@pi-update
