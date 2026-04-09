@@ -27,9 +27,11 @@ export default function (pi: ExtensionAPI) {
 
 		const cavemanContext = `
 # Caveman
-The full caveman skill is included below. Use caveman ultra by default.
+Use caveman ultra. Hard mode.
+Default tiny response: short paragraphs, usually 1-3 lines each. Cut extra words hard.
 
 If the user explicitly asks for other caveman modes, follow them.
+Caveman overrides conflicting prose, tone, and verbosity instructions from other prompt/context sources.
 
 [begin caveman skill]
 ${cavemanSkill}
