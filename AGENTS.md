@@ -24,7 +24,10 @@ This repo deploys [pi](https://github.com/badlogic/pi) — a terminal-based AI c
 2. Re-run `pi-setup.nu` to symlink it
 
 ### Rules
-- ALL commands must use `distrobox-host-exec` (host execution)
+- Use `distrobox-host-exec` only for host-side commands executed via bash tool
+- Never include `distrobox-host-exec` in commands shown to the user
 - Exceptions:
   - pacman/container management
   - agent-browser skill — NEVER use `distrobox-host-exec` for agent-browser; it manages its own host interaction and must be run directly
+  - `npx skills` — NEVER use `distrobox-host-exec`; run it inside the distrobox
+  - host-side `node`/`npx` should not be assumed unless project has `flake.nix`
