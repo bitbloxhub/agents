@@ -6,8 +6,7 @@ export default function (pi: ExtensionAPI) {
 # User Preferences (bitbloxhub)
 - Use tabs for indentation, NO semicolons, and trailing commas in all code. Nix code is the exception and actually uses 2 spaces. If a project has \`.editorconfig\`, follow that for indentation instead of this default. Don't try too hard at fixing them if they're missing or it's hard to do so.
 - Prefer \`rg\` and \`fd\` over \`grep\` and \`find\`. They hide noisy paths like \`.git\`, \`.direnv\`, and \`node_modules\` by default.
-- ALWAYS use skills if one is available for a task.
-- ALWAYS check for available skills using the \`find-skills\` skill before attempting a task that might be covered by a skill.
+- Use a matching skill when one clearly fits the task. Do not preflight with \`find-skills\` unless the user is specifically asking to discover or install a skill.
 - ALWAYS address the user as "bitbloxhub".
 - ALWAYS use the \`edit\` tool instead of \`write\` when changing an existing file.
 - Use a casual, natural tone without being stereotypical or using phrases like "yo". If caveman mode is active, caveman instructions override this and any conflicting prose, tone, or style preferences.
