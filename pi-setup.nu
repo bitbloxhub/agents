@@ -71,6 +71,9 @@ let pi_default_settings = {
 		"openai-codex/gpt-5.3-codex"
 		"openai-codex/gpt-5.4"
 	]
+	steeringMode: "all"
+	followUpMode: "all"
+	enableInstallTelemetry: false
 }
 
 if ($settings_path | path exists) {
