@@ -59,7 +59,7 @@ mkdir $pi_extensions_dir
 # Default settings
 let pi_default_settings = {
 	defaultProvider: "openai-codex"
-	defaultModel: "gpt-5.4"
+	defaultModel: "gpt-5.3-codex"
 	hideThinkingBlock: false
 	defaultThinkingLevel: "medium"
 	enabledModels: [
@@ -68,6 +68,7 @@ let pi_default_settings = {
 		"openrouter/minimax/minimax-m2.7"
 		"openrouter/openai/gpt-oss-120b"
 		"openrouter/mistralai/mistral-small-2603"
+		"openai-codex/gpt-5.3-codex"
 		"openai-codex/gpt-5.4"
 	]
 }
